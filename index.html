@@ -13,9 +13,25 @@
             font-family: Arial, sans-serif;
         }
 
+        .background-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: #F7F7F5;
+            opacity: 0.5;
+            background-image: linear-gradient(#bacdce 1px, transparent 1px), 
+                              linear-gradient(to right, #bacdce 1px, #F7F7F5 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+        }
+
+
         header {
             background-color: #343a40;
-            color: white;
+            color: #F7F7F5;
             padding: 2rem 0;
             text-align: center;
         }
@@ -143,8 +159,7 @@
             width: 100%;
             height: 320px; 
             object-fit: cover;
-            border: 1px solid #000; 
-            padding: 10px; 
+            border: 7px solid #1d3a6f; 
         }
 
         .carousel-control-prev,
@@ -230,6 +245,7 @@
     </style>
 </head>
 <body>
+  <div class="background-overlay"></div>
 
     <div class="container">
         <section class="header-section position-relative text-center text-white">
