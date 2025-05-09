@@ -9,19 +9,10 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-color: #F7F7F5;
+    background: url('images/bg.png') no-repeat center center;
+    background-size: cover;
     opacity: 0.5;
-    background-image: linear-gradient(#bacdce 1px, transparent 1px),
-        linear-gradient(to right, #bacdce 1px, #F7F7F5 1px);
-    background-size: 20px 20px;
     pointer-events: none;
-}
-
-header {
-    background-color: #343a40;
-    color: #F7F7F5;
-    padding: 2rem 0;
-    text-align: center;
 }
 
 .header-section {
@@ -106,7 +97,7 @@ footer {
 }
 
 .container {
-    margin-top: -200px;
+    margin-top: -190px;
 }
 
 .box {
@@ -116,6 +107,7 @@ footer {
     margin: 0 auto;
     padding: 20px;
     background-color: #1d3a6f;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -147,7 +139,7 @@ footer {
 }
 
 .box-project {
-    margin-top: -40px;
+    margin-top: -20px;
     box-sizing: border-box;
 }
 
@@ -168,13 +160,20 @@ footer {
 
 .box3 {
     display: flex;
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
     padding: 16px;
     box-sizing: border-box;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     justify-content: flex-start;
+    transition: transform 0.3s ease;
+}
+
+.box3:hover {
+    transform: scale(1.02);
 }
 
 .box3 img {
@@ -205,7 +204,7 @@ footer {
 }
 
 .box3-content button {
-    padding: 8px 16px;
+    width: 90px;
     background-color: #1d3a6f;
     color: white;
     border: none;
@@ -220,7 +219,8 @@ footer {
 }
 
 .box2 {
-    margin-top: 40px;
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
 .box2 h2 {
@@ -234,7 +234,7 @@ footer {
     width: 100%;
     height: 320px;
     object-fit: cover;
-    border: 5px solid #1d3a6f;
+    border: 3px solid #1d3a6f;
 }
 
 .carousel-control-prev,
