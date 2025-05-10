@@ -12,6 +12,9 @@
 <body>
 
 <header class="navbar">
+  <div class="logo">
+    <img src="images/logo-b.png" alt="Logo">
+  </div>
   <div class="hamburger" id="hamburger">
     <div></div>
     <div></div>
@@ -71,8 +74,22 @@
 
 <section id="certification-section" style="display: none;">
   <h1>CERTIFICATES</h1>
-  <p>This is the Certification section. Add your content here.</p>
+  <div class="certificates-grid">
+    <a href="images/c4.jpg" class="lightbox"><img src="images/c4.jpg" alt="Certificate 1"></a>
+    <a href="images/c5.jpg" class="lightbox"><img src="images/c5.jpg" alt="Certificate 2"></a>
+    <a href="images/c6.jpg" class="lightbox"><img src="images/c6.jpg" alt="Certificate 3"></a>
+    <a href="images/c7.jpg" class="lightbox"><img src="images/c7.jpg" alt="Certificate 4"></a>
+    <a href="images/c8.jpg" class="lightbox"><img src="images/c8.jpg" alt="Certificate 5"></a>
+    <a href="images/c9.jpg" class="lightbox"><img src="images/c9.jpg" alt="Certificate 6"></a>
+  </div>
 </section>
+
+<!-- Lightbox Overlay -->
+<div id="lightbox-overlay" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Full Certificate View">
+</div>
+
+
 
 <section id="connect-section" style="display: none;">
   <h1>CONNECT</h1>

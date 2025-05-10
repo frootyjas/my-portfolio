@@ -39,3 +39,20 @@ links.certification.addEventListener('click', () => setActive('certification'));
 links.connect.addEventListener('click', () => setActive('connect'));
 
 setActive('about');
+
+const lightboxLinks = document.querySelectorAll('.lightbox');
+  const lightboxOverlay = document.getElementById('lightbox-overlay');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  lightboxLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      lightboxImg.src = this.href;
+      lightboxOverlay.style.display = 'flex';
+    });
+  });
+
+  function closeLightbox() {
+    lightboxOverlay.style.display = 'none';
+    lightboxImg.src = '';
+  }
