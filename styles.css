@@ -22,6 +22,8 @@ header.navbar {
 
 nav {
   display: flex;
+  flex-grow: 1; 
+  justify-content: center;
 }
 
 nav ul {
@@ -42,7 +44,7 @@ nav ul li {
 
 nav ul li.active {
   font-weight: bold;
-  color: #007BFF;
+  color: #7C4585;
 }
 
 .hamburger {
@@ -50,6 +52,7 @@ nav ul li.active {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .hamburger div {
