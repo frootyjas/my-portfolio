@@ -12,19 +12,20 @@ header.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 30px;
   padding: 12px 24px;
   background: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-  gap: 20px;
 }
 
-
 .logo img {
-  height: 70px;
+  height: 70px;          
+  width: auto;
   object-fit: contain;
+  display: block;
 }
 
 nav {
@@ -159,8 +160,82 @@ h1 {
   transition: transform 0.3s ease;
 }
 
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  position: relative;
+  margin: 0 auto; 
+  padding-left: 40px; 
+}
+
+.timeline-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  width: 70%; 
+  max-width: 560px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  margin-right: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Example icons as backgrounds */
+.school1-icon {
+  background-image: url('images/bpsu.png'); /* Replace with your image path */
+}
+
+.school2-icon {
+  background-image: url('images/arellano.png'); /* Replace with your image path */
+  background-color: #2980b9;
+}
+
+.school3-icon {
+  background-image: url('images/cob.jpg'); /* Replace with your image path */
+  background-color: #8e44ad;
+}
+
+.school4-icon {
+  background-image: url('images/tortugas.jpg'); /* Replace with your image path */
+  background-color: #2980b9;
+}
+
+.timeline-content h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.timeline-content span {
+  font-size: 14px;
+  color: #666;
+}
+
+.timeline-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+
 section {
-  padding: 40px 20px;
+  padding: 20px 20px;
 }
 
 footer {
@@ -232,6 +307,29 @@ nav.active {
 
   .certificates-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+  }
+
+  .timeline-icon {
+    margin: 0 0 10px 0;
+  }
+
+  .timeline-content h2 {
+    font-size: 14px;
+  }
+
+  .timeline-content span,
+  .timeline-content p {
+    font-size: 13px;
   }
 }
 
