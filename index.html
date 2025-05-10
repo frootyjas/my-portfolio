@@ -4,25 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Knowledge and Skills</title>
-  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    .active {
-      font-weight: bold;
-      color: #007BFF;
-    }
-  </style>
-</head>
+  <link rel="stylesheet" href="styles.css" /></head>
 <body>
+
 <header class="navbar">
   <div class="hamburger" id="hamburger">
     <div></div>
     <div></div>
     <div></div>
   </div>
-  <nav>
+  <nav id="main-nav">
     <ul id="nav-list">
       <li id="about-link"><i class="fa-solid fa-user"></i> About Me</li>
       <li id="skills-link"><i class="fa-solid fa-desktop"></i> Skills</li>
@@ -34,61 +28,60 @@
   </nav>
 </header>
 
+<section id="about-section">
+  <h1>ABOUT ME</h1>
+  <p>This is the About Me section. Add your content here.</p>
+</section>
 
-  <section id="about-section">
-    <h1>ABOUT ME</h1>
-    <p>This is the About Me section. Add your content here.</p>
-  </section>
+<section id="skills-section" style="display: none;">
+  <h1>KNOWLEDGE AND SKILLS</h1>
+  <div class="skills-grid">
+    <div class="skill-card"><i class="devicon-html5-plain colored"></i> HTML</div>
+    <div class="skill-card"><i class="devicon-css3-plain colored"></i> CSS</div>
+    <div class="skill-card"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+    <div class="skill-card"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</div>
+    <div class="skill-card"><i class="devicon-java-plain colored"></i> Java</div>
+    <div class="skill-card"><i class="devicon-php-plain colored"></i> PHP</div>
+    <div class="skill-card"><i class="devicon-csharp-plain colored"></i> C#</div>
+    <div class="skill-card"><i class="devicon-sqlite-plain colored"></i> SQLite</div>
+    <div class="skill-card"><i class="devicon-git-plain colored"></i> Git</div>
+    <div class="skill-card"><i class="devicon-github-original colored"></i> GitHub</div>
+    <div class="skill-card"><img src="images/xampp.png" class="icon-img" alt="XAMPP"> XAMPP</div>
+    <div class="skill-card"><i class="devicon-firebase-plain colored"></i> Firebase</div>
+    <div class="skill-card"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
+    <div class="skill-card"><i class="devicon-visualstudio-plain colored"></i> Visual Studio</div>
+    <div class="skill-card"><i class="devicon-vscode-plain colored"></i> VS Code</div>
+    <div class="skill-card"><i class="devicon-androidstudio-plain colored"></i> Android Studio</div>
+    <div class="skill-card"><img src="images/canva.png" class="icon-img" alt="Canva"> Canva</div>
+    <div class="skill-card"><i class="devicon-figma-plain colored"></i> Figma</div>
+    <div class="skill-card"><img src="images/adobe.png" class="icon-img" alt="Adobe"> Adobe Photoshop</div>
+  </div>
+</section>
 
-  <section id="skills-section" style="display: none;">
-    <h1>KNOWLEDGE AND SKILLS</h1>
-      <div class="skills-grid">
-        <div class="skill-card"><i class="devicon-html5-plain colored"></i> HTML</div>
-        <div class="skill-card"><i class="devicon-css3-plain colored"></i> CSS</div>
-        <div class="skill-card"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
-        <div class="skill-card"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</div>
-        <div class="skill-card"><i class="devicon-java-plain colored"></i> Java</div>
-        <div class="skill-card"><i class="devicon-php-plain colored"></i> PHP</div>
-        <div class="skill-card"><i class="devicon-csharp-plain colored"></i> C#</div>
-        <div class="skill-card"><i class="devicon-sqlite-plain colored"></i> SQLite</div>
-        <div class="skill-card"><i class="devicon-git-plain colored"></i> Git</div>
-        <div class="skill-card"><i class="devicon-github-original colored"></i> GitHub</div>
-        <div class="skill-card"><img src="images/xampp.png" class="icon-img" alt="XAMPP"> XAMPP</div>    
-        <div class="skill-card"><i class="devicon-firebase-plain colored"></i> Firebase</div>
-        <div class="skill-card"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
-        <div class="skill-card"><i class="devicon-visualstudio-plain colored"></i> Visual Studio</div>
-        <div class="skill-card"><i class="devicon-vscode-plain colored"></i> VS Code</div>
-        <div class="skill-card"><i class="devicon-androidstudio-plain colored"></i> Android Studio</div>
-        <div class="skill-card"><img src="images/canva.png" class="icon-img" alt="Canva"> Canva</div>    
-        <div class="skill-card"><i class="devicon-figma-plain colored"></i> Figma</div>
-        <div class="skill-card"><img src="images/adobe.png" class="icon-img" alt="Adobe"> Adobe Photoshop</div>    
-      </div>
-  </section>
+<section id="projects-section" style="display: none;">
+  <h1>PROJECTS</h1>
+  <p>This is the Projects section. Add your content here.</p>
+</section>
 
-  <section id="projects-section" style="display: none;">
-    <h1>PROJECTS</h1>
-    <p>This is the Projects section. Add your content here.</p>
-  </section>
+<section id="education-section" style="display: none;">
+  <h1>EDUCATION</h1>
+  <p>This is the Education section. Add your content here.</p>
+</section>
 
-  <section id="education-section" style="display: none;">
-    <h1>EDUCATION</h1>
-    <p>This is the Education section. Add your content here.</p>
-  </section>
+<section id="certification-section" style="display: none;">
+  <h1>CERTIFICATES</h1>
+  <p>This is the Certification section. Add your content here.</p>
+</section>
 
-  <section id="certification-section" style="display: none;">
-    <h1>CERTIFICATES</h1>
-    <p>This is the Certification section. Add your content here.</p>
-  </section>
+<section id="connect-section" style="display: none;">
+  <h1>CONNECT</h1>
+  <p>This is the Connect section. Add your contact details here.</p>
+</section>
 
-  <section id="connect-section" style="display: none;">
-    <h1>CONNECT</h1>
-    <p>This is the Connect section. Add your contact details here.</p>
-  </section>
+<footer>
+  <small>Template inspired by <a href="https://rionald-carpio.vercel.app" target="_blank" rel="noopener">Original Developer</a></small>
+</footer>
 
-  <footer>
-    <small>Template inspired by <a href="https://rionald-carpio.vercel.app" target="_blank" rel="noopener">Original Developer</a></small>
-  </footer>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

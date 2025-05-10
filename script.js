@@ -1,44 +1,41 @@
- // Toggle mobile nav
-  const hamburger = document.getElementById('hamburger');
-  const navList = document.getElementById('nav-list');
-  hamburger.addEventListener('click', () => {
-    navList.classList.toggle('show');
-  });
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('main-nav');
 
-  // Sections
-  const sections = {
-    about: document.getElementById('about-section'),
-    skills: document.getElementById('skills-section'),
-    projects: document.getElementById('projects-section'),
-    education: document.getElementById('education-section'),
-    certification: document.getElementById('certification-section'),
-    connect: document.getElementById('connect-section'),
-  };
+hamburger.addEventListener('click', () => {
+nav.classList.toggle('active');
+});
 
-  // Links
-  const links = {
-    about: document.getElementById('about-link'),
-    skills: document.getElementById('skills-link'),
-    projects: document.getElementById('projects-link'),
-    education: document.getElementById('education-link'),
-    certification: document.getElementById('certification-link'),
-    connect: document.getElementById('connect-link'),
-  };
+const sections = {
+about: document.getElementById('about-section'),
+skills: document.getElementById('skills-section'),
+projects: document.getElementById('projects-section'),
+education: document.getElementById('education-section'),
+certification: document.getElementById('certification-section'),
+connect: document.getElementById('connect-section'),
+};
 
-  function setActive(id) {
-    Object.values(links).forEach(link => link.classList.remove('active'));
-    Object.values(sections).forEach(section => section.style.display = 'none');
-    links[id].classList.add('active');
-    sections[id].style.display = 'block';
-    navList.classList.remove('show'); // hide nav after clicking
-  }
+const links = {
+about: document.getElementById('about-link'),
+skills: document.getElementById('skills-link'),
+projects: document.getElementById('projects-link'),
+education: document.getElementById('education-link'),
+certification: document.getElementById('certification-link'),
+connect: document.getElementById('connect-link'),
+};
 
-  links.about.addEventListener('click', () => setActive('about'));
-  links.skills.addEventListener('click', () => setActive('skills'));
-  links.projects.addEventListener('click', () => setActive('projects'));
-  links.education.addEventListener('click', () => setActive('education'));
-  links.certification.addEventListener('click', () => setActive('certification'));
-  links.connect.addEventListener('click', () => setActive('connect'));
+function setActive(id) {
+Object.values(links).forEach(link => link.classList.remove('active'));
+Object.values(sections).forEach(section => section.style.display = 'none');
+links[id].classList.add('active');
+sections[id].style.display = 'block';
+nav.classList.remove('active');
+}
 
-  // Show only About initially
-  setActive('about');
+links.about.addEventListener('click', () => setActive('about'));
+links.skills.addEventListener('click', () => setActive('skills'));
+links.projects.addEventListener('click', () => setActive('projects'));
+links.education.addEventListener('click', () => setActive('education'));
+links.certification.addEventListener('click', () => setActive('certification'));
+links.connect.addEventListener('click', () => setActive('connect'));
+
+setActive('about');
