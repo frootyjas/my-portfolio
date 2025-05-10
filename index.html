@@ -1,132 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <div class="background-overlay"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Knowledge and Skills</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    .active {
+      font-weight: bold;
+      color: #007BFF;
+    }
+  </style>
+</head>
+<body>
+<header class="navbar">
+  <div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <nav>
+    <ul id="nav-list">
+      <li id="about-link"><i class="fa-solid fa-user"></i> About Me</li>
+      <li id="skills-link"><i class="fa-solid fa-desktop"></i> Skills</li>
+      <li id="projects-link"><i class="fa-solid fa-code"></i> Projects</li>
+      <li id="education-link"><i class="fa-solid fa-graduation-cap"></i> Education</li>
+      <li id="certification-link"><i class="fa-solid fa-certificate"></i> Certification</li>
+      <li id="connect-link"><i class="fa-solid fa-phone"></i> Connect</li>
+    </ul>
+  </nav>
+</header>
 
-    <div class="container">
-      <section class="header-section position-relative text-center text-white">
-        <div class="header-text">
-          <h1 class="my">My</h1>
-          <h1 class="portfolio">PORTFOLIO<span class="star"></span></h1>
-        </div>
-        <img src="images/sample.png" alt="Model" class="header-image">
-      </section>
 
-      <div class="box">
-        <h2>About Me</h2>
-        <p class="about-me-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <a href="path-to-your-cv.pdf" download class="download-btn">Download my full CV</a>
+  <section id="about-section">
+    <h1>ABOUT ME</h1>
+    <p>This is the About Me section. Add your content here.</p>
+  </section>
+
+  <section id="skills-section" style="display: none;">
+    <h1>KNOWLEDGE AND SKILLS</h1>
+      <div class="skills-grid">
+        <div class="skill-card"><i class="devicon-html5-plain colored"></i> HTML</div>
+        <div class="skill-card"><i class="devicon-css3-plain colored"></i> CSS</div>
+        <div class="skill-card"><i class="devicon-javascript-plain colored"></i> JavaScript</div>
+        <div class="skill-card"><i class="devicon-bootstrap-plain colored"></i> Bootstrap</div>
+        <div class="skill-card"><i class="devicon-java-plain colored"></i> Java</div>
+        <div class="skill-card"><i class="devicon-php-plain colored"></i> PHP</div>
+        <div class="skill-card"><i class="devicon-csharp-plain colored"></i> C#</div>
+        <div class="skill-card"><i class="devicon-sqlite-plain colored"></i> SQLite</div>
+        <div class="skill-card"><i class="devicon-git-plain colored"></i> Git</div>
+        <div class="skill-card"><i class="devicon-github-original colored"></i> GitHub</div>
+        <div class="skill-card"><img src="images/xampp.png" class="icon-img" alt="XAMPP"> XAMPP</div>    
+        <div class="skill-card"><i class="devicon-firebase-plain colored"></i> Firebase</div>
+        <div class="skill-card"><i class="devicon-mongodb-plain colored"></i> MongoDB</div>
+        <div class="skill-card"><i class="devicon-visualstudio-plain colored"></i> Visual Studio</div>
+        <div class="skill-card"><i class="devicon-vscode-plain colored"></i> VS Code</div>
+        <div class="skill-card"><i class="devicon-androidstudio-plain colored"></i> Android Studio</div>
+        <div class="skill-card"><img src="images/canva.png" class="icon-img" alt="Canva"> Canva</div>    
+        <div class="skill-card"><i class="devicon-figma-plain colored"></i> Figma</div>
+        <div class="skill-card"><img src="images/adobe.png" class="icon-img" alt="Adobe"> Adobe Photoshop</div>    
       </div>
+  </section>
 
-      <div class="box-project">
-        <h2>Projects</h2>
-        <div class="card-container">
-          <div class="box3">
-            <img src="images/sample1.jpg" alt="Sample Image">
-            <div class="box3-content">
-              <h4>Sample Title 1</h4>
-              <p>This is a brief description or summary below the title. It gives more context to the image on the left.</p>
-              <button>More</button>
-            </div>
-          </div>
+  <section id="projects-section" style="display: none;">
+    <h1>PROJECTS</h1>
+    <p>This is the Projects section. Add your content here.</p>
+  </section>
 
-          <div class="box3">
-            <img src="images/34.png" alt="Sample Image">
-            <div class="box3-content">
-              <h4>Sample Title 2</h4>
-              <p>This is another brief description or summary for the second box. It gives more context to the image.</p>
-              <button>More</button>
-            </div>
-          </div>
+  <section id="education-section" style="display: none;">
+    <h1>EDUCATION</h1>
+    <p>This is the Education section. Add your content here.</p>
+  </section>
 
-          <div class="box3">
-            <img src="images/44.jpg" alt="Sample Image">
-            <div class="box3-content">
-              <h4>Sample Title 3</h4>
-              <p>Third box description goes here. More context is provided below the title.</p>
-              <button>More</button>
-            </div>
-          </div>
+  <section id="certification-section" style="display: none;">
+    <h1>CERTIFICATES</h1>
+    <p>This is the Certification section. Add your content here.</p>
+  </section>
 
-          <div class="box3">
-            <img src="images/55.png" alt="Sample Image">
-            <div class="box3-content">
-              <h4>Sample Title 4</h4>
-              <p>Fourth box description goes here. More context and information.</p>
-              <button>More</button>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section id="connect-section" style="display: none;">
+    <h1>CONNECT</h1>
+    <p>This is the Connect section. Add your contact details here.</p>
+  </section>
 
-      <div class="box2">
-        <h2>Certifications</h2>
-        <div id="certificateCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-4">
-                  <img src="images/1.jpg" class="d-block w-100" alt="Certificate 1">
-                </div>
-                <div class="col-4">
-                  <img src="images/6.jpg" class="d-block w-100" alt="Certificate 2">
-                </div>
-                <div class="col-4">
-                  <img src="images/3.jpg" class="d-block w-100" alt="Certificate 3">
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-4">
-                  <img src="images/4.jpg" class="d-block w-100" alt="Certificate 4">
-                </div>
-                <div class="col-4">
-                  <img src="images/5.jpg" class="d-block w-100" alt="Certificate 5">
-                </div>
-                <div class="col-4">
-                  <img src="images/2.jpg" class="d-block w-100" alt="Certificate 6">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-controls">
-            <button class="carousel-control-prev" type="button" data-bs-target="#certificateCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#certificateCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+  <footer>
+    <small>Template inspired by <a href="https://rionald-carpio.vercel.app" target="_blank" rel="noopener">Original Developer</a></small>
+  </footer>
 
-    <footer class="footer">
-      <h4>Connect with me</h4>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/c.smin.xen.ri.kes" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="mailto:jasminedenriquez@gmail.com"><i class="fas fa-envelope"></i></a>
-        <a href="https://www.linkedin.com/in/jasmine-enriquez-812590216/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/frootyjas" target="_blank"><i class="fab fa-github"></i></a>
-      </div>
-      <p>© 2025 Jasmine Enriquez. All rights reserved.</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
