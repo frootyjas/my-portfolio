@@ -384,13 +384,13 @@ nav.active {
   }
 
   .timeline {
-    padding-left: 20px;
+    padding: 20px;
   }
 
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
-    width: 90%;
+    width: 100%;
   }
 
   .timeline-icon {
@@ -424,7 +424,7 @@ nav.active {
   }
 
   .about-info p {
-    max-width: 90%;
+    max-width: 100%;
     font-size: 14px;
     text-align: center;
   }
@@ -439,11 +439,16 @@ nav.active {
   }
 
   .download-btn {
-    max-width: none;
+    display: block;
+    max-width: 110px;
     width: auto;
     padding: 10px 15px;
     font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 10px;
   }
+
 }
 
 @media (max-width: 480px) {
