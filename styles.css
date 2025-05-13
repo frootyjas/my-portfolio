@@ -112,7 +112,7 @@ h1 {
 }
 
 .skill-card:hover {
-  transform: scale(1.05); /* Zoom effect */
+  transform: scale(1.05);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 .certificates-grid {
@@ -126,7 +126,7 @@ h1 {
 
 .certificates-grid img {
   width: 100%;
-  height: 220px; /* fixed height for uniform size */
+  height: 220px; 
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -208,21 +208,21 @@ h1 {
 
 /* Example icons as backgrounds */
 .school1-icon {
-  background-image: url('images/bpsu.png'); /* Replace with your image path */
+  background-image: url('images/bpsu.png'); 
 }
 
 .school2-icon {
-  background-image: url('images/arellano.png'); /* Replace with your image path */
+  background-image: url('images/arellano.png'); 
   background-color: #2980b9;
 }
 
 .school3-icon {
-  background-image: url('images/cob.jpg'); /* Replace with your image path */
+  background-image: url('images/cob.jpg'); 
   background-color: #8e44ad;
 }
 
 .school4-icon {
-  background-image: url('images/tortugas.jpg'); /* Replace with your image path */
+  background-image: url('images/tortugas.jpg'); 
   background-color: #2980b9;
 }
 
@@ -246,7 +246,7 @@ h1 {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  align-items: center; /* Changed from flex-start to center for vertical centering */
+  align-items: center; 
   padding: 20px;
 }
 
@@ -300,11 +300,77 @@ h1 {
   background-color: #7C4585;
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 20px;
   transition: background 0.2s ease;
 }
 
 .download-btn:hover {
+  background-color: #9b59b6;
+}
+
+#connect-section {
+  display: flex;
+  flex-direction: row;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.left-panel, .right-panel {
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.left-panel {
+  background-color: #fff;
+}
+
+.left-panel p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.right-panel form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.right-panel form input,
+.right-panel form textarea {
+  width: 60%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 20px;
+  background-color: #E3D3E8;
+  color: #000;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.right-panel form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.right-panel input::placeholder,
+.right-panel textarea::placeholder {
+  color: #e6f9f3;
+}
+
+.right-panel button {
+  background-color: #7C4585;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.right-panel button:hover {
   background-color: #9b59b6;
 }
 
@@ -449,6 +515,19 @@ nav.active {
     margin-top: 10px;
   }
 
+  #connect-section {
+    flex-direction: column;
+  }
+
+  .left-panel p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .right-panel form input,
+  .right-panel form textarea {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
