@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -42,18 +46,21 @@ nav ul {
   padding: 0;
 }
 
-nav ul li {
+nav ul li a {
   cursor: pointer;
   font-weight: 500;
   display: flex;
   align-items: center;
   gap: 6px;
+  text-decoration: none;
+  color: inherit; 
 }
 
-nav ul li.active {
+nav ul li a.active {
   font-weight: bold;
   color: #7C4585;
 }
+
 
 .hamburger {
   display: none;
@@ -315,6 +322,7 @@ h1 {
 
 #connect-section {
   display: flex;
+  display: block;
   flex-direction: row;
   max-width: 1000px;
   margin: 0 auto;

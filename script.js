@@ -5,7 +5,7 @@ hamburger.addEventListener('click', () => {
 nav.classList.toggle('active');
 });
 
-const sections = {
+/*const sections = {
 about: document.getElementById('about-section'),
 skills: document.getElementById('skills-section'),
 projects: document.getElementById('projects-section'),
@@ -38,7 +38,7 @@ links.education.addEventListener('click', () => setActive('education'));
 links.certification.addEventListener('click', () => setActive('certification'));
 links.connect.addEventListener('click', () => setActive('connect'));
 
-setActive('about');
+setActive('about');*/
 
 const lightboxLinks = document.querySelectorAll('.lightbox');
   const lightboxOverlay = document.getElementById('lightbox-overlay');
