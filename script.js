@@ -1,9 +1,27 @@
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('main-nav');
+const navLinks = document.querySelectorAll('#nav-list a');
 
+// Toggle hamburger menu
 hamburger.addEventListener('click', () => {
-nav.classList.toggle('active');
+  nav.classList.toggle('active');
 });
+
+// Close nav when a link is clicked
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    nav.classList.remove('active');
+  });
+});
+
+// Close nav when clicking outside
+document.addEventListener('click', (e) => {
+  const isClickInside = nav.contains(e.target) || hamburger.contains(e.target);
+  if (!isClickInside) {
+    nav.classList.remove('active');
+  }
+});
+
 
 /*const sections = {
 about: document.getElementById('about-section'),
