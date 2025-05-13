@@ -152,7 +152,6 @@ h1 {
   color: #333;
 }
 
-
 #lightbox-overlay {
   display: none;
   position: fixed;
@@ -387,6 +386,10 @@ h1 {
 .right-panel button:hover {
   background-color: #9b59b6;
   transition: background 0.2s ease;
+}
+
+#projects-section p{
+  text-align: center;
 }
 
 section {
