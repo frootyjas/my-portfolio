@@ -206,7 +206,6 @@ h1 {
   background-position: center;
 }
 
-/* Example icons as backgrounds */
 .school1-icon {
   background-image: url('images/bpsu.png'); 
 }
@@ -264,19 +263,25 @@ h1 {
 
 .social-icons {
   display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 10px; 
 }
 
-.social-icons a i {
-  font-size: 25px; 
-  color: #7C4585;  
-  transition: transform 0.3s ease, color 0.3s ease;
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7C4585; 
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  font-size: 14px;
 }
 
-.social-icons a i:hover {
-  transform: scale(1.2);
-  color: #9b59b6;
+.social-icon:hover {
+  background-color: #9b59b6; 
 }
 
 .about-info {
@@ -372,6 +377,7 @@ h1 {
 
 .right-panel button:hover {
   background-color: #9b59b6;
+  transition: background 0.2s ease;
 }
 
 section {
