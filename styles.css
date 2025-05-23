@@ -1,15 +1,54 @@
-html {
-  scroll-behavior: smooth;
-}
+@import url('https://fonts.googleapis.com/css?family=Exo:100');
 
 body {
-  margin: 0;
-  font-family: 'Montserrat', sans-serif;
-  background: #fff;
-  color: #333;
+  margin-top: 13.5rem; 
+  color: #999;        
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1);
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  background-size: 50px 50px;
+
+  -webkit-animation: bg-scrolling-reverse 0.92s linear infinite;
+  -moz-animation:    bg-scrolling-reverse 0.92s linear infinite;
+  -o-animation:      bg-scrolling-reverse 0.92s linear infinite;
+  animation:         bg-scrolling-reverse 0.92s linear infinite;
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: 'Montserrat', sans-serif; 
+  color: #333; 
+  margin: 0; 
+}
+
+/* Animation keyframes */
+@keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% { background-position: 50px 50px; }
+}
+
+body::before {
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: normal;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 1rem; 
+  left: 0;
+  pointer-events: none;
+  user-select: none;
+  color: rgba(0,0,0,0.1);
+  font-family: 'Exo', sans-serif;
 }
 
 header.navbar {
@@ -60,7 +99,6 @@ nav ul li a.active {
   font-weight: bold;
   color: #7C4585;
 }
-
 
 .hamburger {
   display: none;
@@ -505,12 +543,11 @@ footer {
   font-size: 0.9rem;
   color: #fff;
   border-top: 1px solid #ddd;
-  /* Remove text-align center */
 }
 
 .footer-container {
   display: flex;
-  justify-content: center; /* centers children horizontally */
+  justify-content: center; 
   align-items: center;
   position: relative;
 }
@@ -541,7 +578,6 @@ footer small img {
   vertical-align: middle;
   border: none;
 }
-
 
 @media (max-width: 1024px) {
   .skills-grid {
@@ -674,6 +710,14 @@ nav.active {
   .right-panel form textarea {
     width: 100%;
   }
+
+  .footer-container {
+    justify-content: space-between;
+  }
+  .right-text {
+    position: static;
+    margin-left: 10px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -688,5 +732,17 @@ nav.active {
   .modal-content {
     width: 90%;
     padding: 15px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    position: static;
+    text-align: center;
+  }
+
+  .right-text {
+    position: static;
+    margin-top: 5px;
+    justify-content: center;
   }
 }
