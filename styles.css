@@ -362,7 +362,7 @@ h1 {
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 20px;
-  background-color: #E3D3E8;
+  background-color: #F2EAF4;
   color: #000;
   font-size: 14px;
   box-sizing: border-box;
@@ -394,7 +394,7 @@ h1 {
   margin-bottom: 10px;
   border: none;
   border-radius: 20px;
-  background-color: #E3D3E8;
+  background-color: #F2EAF4;
   outline: none;
   resize: none;
   font-family: 'Poppins', sans-serif;
@@ -443,7 +443,7 @@ h1 {
   margin-bottom: 15px;
   border: none;
   border-radius: 20px;
-  background-color: #E3D3E8;
+  background-color: #F2EAF4;
   color: #000;
   font-size: 14px;
   box-sizing: border-box;
@@ -456,7 +456,7 @@ h1 {
 
 .right-panel input::placeholder,
 .right-panel textarea::placeholder {
-  color: #e6f9f3;
+  font-family: 'Poppins', sans-serif;
 }
 
 .right-panel button {
@@ -586,7 +586,6 @@ nav.active {
   .profile-image img {
     width: 160px;
     height: 235px;
-
   }
 
   .about-name {
