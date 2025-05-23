@@ -689,9 +689,10 @@ nav.active {
     flex-direction: column;
   }
 
-  .connect-section p {
-    font-size: 14px;
+  #connect-section p {
+    font-size: 1rem;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   .feedbackForm form input,
@@ -722,6 +723,11 @@ nav.active {
     padding: 15px;
   }
   
+  .connect-section p {
+    font-size: 14px;
+    text-align: center;
+  }
+
   .footer-container {
     flex-direction: column;
     position: static;
