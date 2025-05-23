@@ -256,10 +256,11 @@ h1 {
 }
 
 .profile-image img {
-  width: 400px;
-  height: 400px;
+  width: 260px;
+  height: 335px;
   object-fit: cover;
 }
+
 
 .about-name {
   font-size: 28px;
@@ -583,8 +584,9 @@ nav.active {
   }
 
   .profile-image img {
-    width: 250px;
-    height: 250px;
+    width: 160px;
+    height: 235px;
+
   }
 
   .about-name {
