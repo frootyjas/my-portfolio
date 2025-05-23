@@ -367,6 +367,7 @@ h1 {
   box-sizing: border-box;
   border: none;
   outline: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 #emailInput:focus {
@@ -395,7 +396,7 @@ h1 {
   background-color: #E3D3E8;
   outline: none;
   resize: none;
-  transition: border 0.2s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
 #messageInput:focus {
@@ -602,7 +603,7 @@ nav.active {
   }
 
   .social-icons a i {
-    font-size: 28px;
+    font-size: 15px;
   }
 
   .download-btn {
@@ -638,5 +639,10 @@ nav.active {
 
   .certificates-grid {
     grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 15px;
   }
 }
