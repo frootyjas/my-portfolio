@@ -170,13 +170,10 @@
 </div>
 
 <section id="connect-section">
-  <div class="left-panel">
-    <h1>SEND YOUR FEEDBACK</h1>
-    <p>Feel free to reach out for collaborations, questions, or just to say hello, I’d love to hear from you!</p>
-  </div>
-
+  <h1>SEND YOUR FEEDBACK</h1>
+  <p>Feel free to reach out for collaborations, questions, or just to say hello, I’d love to hear from you!</p>
   <div class="right-panel">
-    <form>
+    <form id="feedbackForm" action="https://formspree.io/f/mjkwdann" method="POST">
       <div class="rating">
         <div class="stars">
           <i class="fa-regular fa-star" data-value="1"></i>
@@ -185,11 +182,11 @@
           <i class="fa-regular fa-star" data-value="4"></i>
           <i class="fa-regular fa-star" data-value="5"></i>
         </div>
-        <input type="hidden" name="rating" id="rating-value" required>
+        <input type="hidden" name="rating" id="rating-value" />
       </div>
 
-      <input type="email" placeholder="Email" required />
-      <textarea placeholder="Message" required></textarea>
+      <input type="email" name="email" id="feedbackEmailInput" placeholder="Email (optional)" />
+      <textarea name="message" id="feedbackMessageInput" placeholder="Message" required></textarea>
       <button type="submit">Send</button>
     </form>
   </div>
@@ -202,7 +199,7 @@
       <a href="https://rionald-carpio.vercel.app" target="_blank" rel="noopener">Original Developer</a>
     </small>
     <small class="right-text">
-      Page visits: 
+      Page visits:
       <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener">
         <img src="https://hitwebcounter.com/counter/counter.php?page=20734234&style=0006&nbdigits=4&type=page&initCount=0" 
              title="Counter Widget" 

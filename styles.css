@@ -443,35 +443,26 @@ h1 {
 }
 
 #connect-section {
-  display: flex;
-  display: block;
-  flex-direction: row;
-  max-width: 1000px;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.left-panel, .right-panel {
-  flex: 1;
+.right-panel {
   box-sizing: border-box;
-}
-
-.left-panel p {
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-.right-panel form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 15px;
   margin-bottom: 50px;
 }
 
-.right-panel form input,
-.right-panel form textarea {
+#feedbackForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#feedbackForm input,
+#feedbackForm textarea {
   width: 60%;
   padding: 12px;
   margin-bottom: 15px;
@@ -481,19 +472,20 @@ h1 {
   color: #000;
   font-size: 14px;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-.right-panel form textarea {
+#feedbackForm textarea {
   resize: none;
   height: 100px;
 }
 
-.right-panel input::placeholder,
-.right-panel textarea::placeholder {
+#feedbackForm input::placeholder,
+#feedbackForm textarea::placeholder {
   font-family: 'Poppins', sans-serif;
 }
 
-.right-panel button {
+#feedbackForm button {
   background-color: #7C4585;
   color: #fff;
   border: none;
@@ -502,34 +494,34 @@ h1 {
   cursor: pointer;
 }
 
-.right-panel button:hover {
+#feedbackForm button:hover {
   background-color: #9b59b6;
   transition: background 0.2s ease;
 }
 
-.stars {
-    display: flex;
-    gap: 5px;
-    margin-bottom: 25px;
-    font-size: 2rem;
-    color: #ccc;
-    cursor: pointer;
-  }
+#feedbackForm .stars {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #ccc;
+  cursor: pointer;
+}
 
-  .stars i.selected {
-    color: gold;
-  }
+#feedbackForm .stars i.fa-solid {
+  color: gold;
+}
 
-  .stars i.hovered {
-    color: gold;
-  }
-
-#projects-section p{
-  text-align: center;
+#feedbackForm .stars i.hovered {
+  color: gold;
 }
 
 section {
   padding: 20px 20px;
+}
+
+#projects-section p{
+  text-align: center;
 }
 
 footer {

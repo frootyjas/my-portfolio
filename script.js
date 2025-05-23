@@ -22,42 +22,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
-
-/*const sections = {
-about: document.getElementById('about-section'),
-skills: document.getElementById('skills-section'),
-projects: document.getElementById('projects-section'),
-education: document.getElementById('education-section'),
-certification: document.getElementById('certification-section'),
-connect: document.getElementById('connect-section'),
-};
-
-const links = {
-about: document.getElementById('about-link'),
-skills: document.getElementById('skills-link'),
-projects: document.getElementById('projects-link'),
-education: document.getElementById('education-link'),
-certification: document.getElementById('certification-link'),
-connect: document.getElementById('connect-link'),
-};
-
-function setActive(id) {
-Object.values(links).forEach(link => link.classList.remove('active'));
-Object.values(sections).forEach(section => section.style.display = 'none');
-links[id].classList.add('active');
-sections[id].style.display = 'block';
-nav.classList.remove('active');
-}
-
-links.about.addEventListener('click', () => setActive('about'));
-links.skills.addEventListener('click', () => setActive('skills'));
-links.projects.addEventListener('click', () => setActive('projects'));
-links.education.addEventListener('click', () => setActive('education'));
-links.certification.addEventListener('click', () => setActive('certification'));
-links.connect.addEventListener('click', () => setActive('connect'));
-
-setActive('about');*/
-
+//for viewing certificates
 const lightboxLinks = document.querySelectorAll('.lightbox');
   const lightboxOverlay = document.getElementById('lightbox-overlay');
   const lightboxImg = document.getElementById('lightbox-img');
@@ -75,6 +40,7 @@ const lightboxLinks = document.querySelectorAll('.lightbox');
     lightboxImg.src = '';
   }
 
+  //cv modal
   const modal = document.getElementById("cvModal");
   const openBtn = document.getElementById("openModalBtn");
   const closeBtn = document.querySelector(".close");
@@ -94,51 +60,68 @@ const lightboxLinks = document.querySelectorAll('.lightbox');
     }
   };
 
-const form = document.getElementById("cvRequestForm");
-  form.addEventListener("submit", function (e) {
-    const email = document.getElementById("emailInput").value;
-    if (!email) {
-      alert("Please enter a valid email.");
-      e.preventDefault(); 
-      return;
+// For CV request form
+const cvForm = document.getElementById("cvRequestForm");
+cvForm.addEventListener("submit", function (e) {
+  const email = document.getElementById("emailInput").value;
+  if (!email) {
+    e.preventDefault();
+    return;
+  }
+
+  setTimeout(() => {
+    alert(`Thank you! The owner has been notified.\n\nEmail: ${email}`);
+    document.getElementById("cvModal").style.display = "none";
+  }, 300);
+});
+
+const stars = document.querySelectorAll('.stars i');
+const ratingValue = document.getElementById('rating-value');
+
+stars.forEach(star => {
+  star.addEventListener('click', () => {
+    const value = star.getAttribute('data-value');
+    ratingValue.value = value;
+
+    stars.forEach(s => {
+      s.classList.remove('fa-solid');
+      s.classList.add('fa-regular');
+    });
+
+    for (let i = 0; i < value; i++) {
+      stars[i].classList.remove('fa-regular');
+      stars[i].classList.add('fa-solid');
     }
-
-    setTimeout(() => {
-      alert(`Thank you! The owner has been notified.\n\nEmail: ${email}`);
-      document.getElementById("cvModal").style.display = "none";
-    }, 300);
   });
+});
 
-  const stars = document.querySelectorAll('.stars i');
-  const ratingValue = document.getElementById('rating-value');
+const feedbackForm = document.getElementById('feedbackForm');
 
-  let selectedRating = 0;
+feedbackForm.addEventListener('submit', function (e) {
+  const ratingValue = document.getElementById('rating-value').value;
+  const message = document.getElementById('feedbackMessageInput').value.trim();
 
-  stars.forEach((star, index) => {
-    // CLICK: Set selected rating
-    star.addEventListener('click', () => {
-      selectedRating = index + 1;
-      ratingValue.value = selectedRating;
-      updateStars();
-    });
-
-    // HOVER: Highlight only the hovered star
-    star.addEventListener('mouseover', () => {
-      clearHover();
-      star.classList.add('hovered');
-    });
-
-    star.addEventListener('mouseout', () => {
-      clearHover();
-    });
-  });
-
-  function updateStars() {
-    stars.forEach((star, i) => {
-      star.classList.toggle('selected', i < selectedRating);
-    });
+  // Simple validation
+  if (!ratingValue || !message) {
+    e.preventDefault();
+    alert('Please provide a rating and a message.');
+    return;
   }
 
-  function clearHover() {
-    stars.forEach(s => s.classList.remove('hovered'));
-  }
+  // Optionally: show thank you alert after slight delay
+  setTimeout(() => {
+    alert('Thank you! Your feedback has been sent.');
+    
+    // Reset stars UI
+    stars.forEach(s => {
+      s.classList.remove('fa-solid');
+      s.classList.add('fa-regular');
+    });
+    
+    // Reset form and hidden rating input
+    feedbackForm.reset();
+    document.getElementById('rating-value').value = '';
+  }, 300);
+
+  // Let the form submit normally here (no e.preventDefault())
+});
