@@ -473,6 +473,23 @@ h1 {
   transition: background 0.2s ease;
 }
 
+.stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    color: #ccc;
+    cursor: pointer;
+  }
+
+  .stars i.selected {
+    color: gold;
+  }
+
+  .stars i.hovered {
+    color: gold;
+  }
+
 #projects-section p{
   text-align: center;
 }
@@ -484,11 +501,30 @@ section {
 footer {
   margin-top: auto;
   background-color: #7C4585;
-  text-align: center;
   padding: 10px;
   font-size: 0.9rem;
   color: #fff;
   border-top: 1px solid #ddd;
+  /* Remove text-align center */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center; /* centers children horizontally */
+  align-items: center;
+  position: relative;
+}
+
+.center-text {
+  flex: 1;
+  text-align: center;
+}
+
+.right-text {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
 }
 
 footer a {
@@ -499,6 +535,13 @@ footer a {
 footer a:hover {
   color: #ccc;
 }
+
+footer small img {
+  height: 20px;
+  vertical-align: middle;
+  border: none;
+}
+
 
 @media (max-width: 1024px) {
   .skills-grid {

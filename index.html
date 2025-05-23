@@ -171,12 +171,23 @@
 
 <section id="connect-section">
   <div class="left-panel">
-    <h1>CONNECT WITH ME</h1>
+    <h1>SEND YOUR FEEDBACK</h1>
     <p>Feel free to reach out for collaborations, questions, or just to say hello, I’d love to hear from you!</p>
   </div>
 
   <div class="right-panel">
     <form>
+      <div class="rating">
+        <div class="stars">
+          <i class="fa-regular fa-star" data-value="1"></i>
+          <i class="fa-regular fa-star" data-value="2"></i>
+          <i class="fa-regular fa-star" data-value="3"></i>
+          <i class="fa-regular fa-star" data-value="4"></i>
+          <i class="fa-regular fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" name="rating" id="rating-value" required>
+      </div>
+
       <input type="email" placeholder="Email" required />
       <textarea placeholder="Message" required></textarea>
       <button type="submit">Send</button>
@@ -184,9 +195,21 @@
   </div>
 </section>
 
-
 <footer>
-  <small>Template inspired by <a href="https://rionald-carpio.vercel.app" target="_blank" rel="noopener">Original Developer</a></small>
+  <div class="footer-container">
+    <small class="center-text">
+      Template inspired by 
+      <a href="https://rionald-carpio.vercel.app" target="_blank" rel="noopener">Original Developer</a>
+    </small>
+    <small class="right-text">
+      Page visits: 
+      <a href="https://www.hitwebcounter.com" target="_blank" rel="noopener">
+        <img src="https://hitwebcounter.com/counter/counter.php?page=20734234&style=0006&nbdigits=4&type=page&initCount=0" 
+             title="Counter Widget" 
+             alt="Visit counter For Websites" border="0" />
+      </a>
+    </small>
+  </div>
 </footer>
 
 <script src="script.js"></script>

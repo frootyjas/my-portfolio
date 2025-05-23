@@ -108,3 +108,37 @@ const form = document.getElementById("cvRequestForm");
       document.getElementById("cvModal").style.display = "none";
     }, 300);
   });
+
+  const stars = document.querySelectorAll('.stars i');
+  const ratingValue = document.getElementById('rating-value');
+
+  let selectedRating = 0;
+
+  stars.forEach((star, index) => {
+    // CLICK: Set selected rating
+    star.addEventListener('click', () => {
+      selectedRating = index + 1;
+      ratingValue.value = selectedRating;
+      updateStars();
+    });
+
+    // HOVER: Highlight only the hovered star
+    star.addEventListener('mouseover', () => {
+      clearHover();
+      star.classList.add('hovered');
+    });
+
+    star.addEventListener('mouseout', () => {
+      clearHover();
+    });
+  });
+
+  function updateStars() {
+    stars.forEach((star, i) => {
+      star.classList.toggle('selected', i < selectedRating);
+    });
+  }
+
+  function clearHover() {
+    stars.forEach(s => s.classList.remove('hovered'));
+  }
