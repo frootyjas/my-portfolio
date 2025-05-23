@@ -94,21 +94,17 @@ const lightboxLinks = document.querySelectorAll('.lightbox');
     }
   };
 
-  requestBtn.onclick = function () {
+const form = document.getElementById("cvRequestForm");
+  form.addEventListener("submit", function (e) {
     const email = document.getElementById("emailInput").value;
     if (!email) {
       alert("Please enter a valid email.");
+      e.preventDefault(); 
       return;
     }
-    // Simulate download or sending request
-    alert(`CV will be sent to ${email}`);
-    modal.style.display = "none";
-  };
 
-  const form = document.getElementById("cvRequestForm");
-  form.addEventListener("submit", function (e) {
     setTimeout(() => {
-      alert("Thank you! The owner has been notified.");
+      alert(`Thank you! The owner has been notified.\n\nEmail: ${email}`);
       document.getElementById("cvModal").style.display = "none";
-    }, 300); // wait for form to submit
+    }, 300);
   });
