@@ -4,7 +4,7 @@ body {
   margin-top: 13.5rem; 
   color: #999;        
   font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
-  text-align: center;
+  text-align: left;
   background-color: rgba(255, 255, 255, 1);
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
   background-size: 50px 50px;
@@ -454,10 +454,6 @@ h1 {
 .left-panel, .right-panel {
   flex: 1;
   box-sizing: border-box;
-}
-
-.left-panel {
-  background-color: #fff;
 }
 
 .left-panel p {
