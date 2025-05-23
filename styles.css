@@ -689,13 +689,13 @@ nav.active {
     flex-direction: column;
   }
 
-  .left-panel p {
+  .connect-section p {
     font-size: 14px;
     text-align: center;
   }
 
-  .right-panel form input,
-  .right-panel form textarea {
+  .feedbackForm form input,
+  .feedbackForm form textarea {
     width: 100%;
   }
 
