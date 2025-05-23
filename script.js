@@ -74,3 +74,33 @@ const lightboxLinks = document.querySelectorAll('.lightbox');
     lightboxOverlay.style.display = 'none';
     lightboxImg.src = '';
   }
+
+  const modal = document.getElementById("cvModal");
+  const openBtn = document.getElementById("openModalBtn");
+  const closeBtn = document.querySelector(".close");
+  const requestBtn = document.getElementById("requestBtn");
+
+  openBtn.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  requestBtn.onclick = function () {
+    const email = document.getElementById("emailInput").value;
+    if (!email) {
+      alert("Please enter a valid email.");
+      return;
+    }
+    // Simulate download or sending request
+    alert(`CV will be sent to ${email}`);
+    modal.style.display = "none";
+  };
