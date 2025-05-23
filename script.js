@@ -104,3 +104,11 @@ const lightboxLinks = document.querySelectorAll('.lightbox');
     alert(`CV will be sent to ${email}`);
     modal.style.display = "none";
   };
+
+  const form = document.getElementById("cvRequestForm");
+  form.addEventListener("submit", function (e) {
+    setTimeout(() => {
+      alert("Thank you! The owner has been notified.");
+      document.getElementById("cvModal").style.display = "none";
+    }, 300); // wait for form to submit
+  });
