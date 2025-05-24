@@ -40,38 +40,51 @@ const lightboxLinks = document.querySelectorAll('.lightbox');
     lightboxImg.src = '';
   }
 
-  //cv modal
-  const modal = document.getElementById("cvModal");
-  const openBtn = document.getElementById("openModalBtn");
-  const closeBtn = document.querySelector(".close");
-  const requestBtn = document.getElementById("requestBtn");
+// CV Modal Logic
+const cvModal = document.getElementById("cvModal");
+const cvOpenBtn = document.querySelector(".download-btn");
+const cvCloseBtn = document.querySelector(".cv-close");
 
-  openBtn.onclick = function () {
-    modal.style.display = "block";
-  };
+cvOpenBtn.onclick = () => (cvModal.style.display = "block");
+cvCloseBtn.onclick = () => (cvModal.style.display = "none");
+window.addEventListener("click", (e) => {
+  if (e.target === cvModal) cvModal.style.display = "none";
+});
 
-  closeBtn.onclick = function () {
-    modal.style.display = "none";
-  };
+// Resume Modal Logic
+const resumeModal = document.getElementById("resumeModal");
+const resumeOpenBtn = document.querySelector(".downloadresume-btn");
+const resumeCloseBtn = document.querySelector(".resume-close");
 
-  window.onclick = function (event) {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  };
+resumeOpenBtn.onclick = () => (resumeModal.style.display = "block");
+resumeCloseBtn.onclick = () => (resumeModal.style.display = "none");
+window.addEventListener("click", (e) => {
+  if (e.target === resumeModal) resumeModal.style.display = "none";
+});
 
-// For CV request form
-const cvForm = document.getElementById("cvRequestForm");
-cvForm.addEventListener("submit", function (e) {
-  const email = document.getElementById("emailInput").value;
+// CV form
+document.getElementById("cvRequestForm").addEventListener("submit", function (e) {
+  const email = document.getElementById("cvEmailInput").value;
   if (!email) {
     e.preventDefault();
     return;
   }
-
   setTimeout(() => {
     alert(`Thank you! The owner has been notified.\n\nEmail: ${email}`);
-    document.getElementById("cvModal").style.display = "none";
+    cvModal.style.display = "none";
+  }, 300);
+});
+
+// Resume form
+document.getElementById("resumeRequestForm").addEventListener("submit", function (e) {
+  const email = document.getElementById("resumeEmailInput").value;
+  if (!email) {
+    e.preventDefault();
+    return;
+  }
+  setTimeout(() => {
+    alert(`Thank you! The owner has been notified.\n\nEmail: ${email}`);
+    resumeModal.style.display = "none";
   }, 300);
 });
 

@@ -56,24 +56,42 @@
         You may request to download my CV to learn more about my educational background.
       </p>
 
-      <a href="#" class="download-btn" id="openModalBtn">Request CV</a>
+      <div class="button-container">
+        <a href="#" class="download-btn" id="openModalBtn">Request CV</a>
+        <a href="#" class="downloadresume-btn" id="openModalBtn">Request Resume</a>
+      </div>
     </div>
   </div>
 </section>
 
 <div id="cvModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close cv-close">&times;</span>
     <h2>Request CV</h2>
     <p>Enter your email to receive the CV:</p>
     <form action="https://formspree.io/f/mjkwdann" method="POST" id="cvRequestForm">
-    <input type="email" name="email" id="emailInput" placeholder="you@example.com" required>
-      <textarea name="message" id="messageInput" rows="4" placeholder="Optional message (e.g., why you're requesting the CV)"></textarea>
+      <input type="email" name="email" id="cvEmailInput" placeholder="you@example.com" required>
+      <textarea name="message" rows="4" placeholder="Optional message (e.g., why you're requesting the CV)"></textarea>
       <input type="hidden" name="_subject" value="CV Request from Portfolio">
-      <button type="submit" id="requestBtn">Request</button>
+      <button type="submit" id="cvRequestBtn">Request</button>
     </form>
   </div>
 </div>
+
+<div id="resumeModal" class="modal">
+  <div class="modal-content">
+    <span class="close resume-close">&times;</span>
+    <h2>Request Resume</h2>
+    <p>Enter your email to receive the resume:</p>
+    <form action="https://formspree.io/f/mjkwdann" method="POST" id="resumeRequestForm">
+      <input type="email" name="email" id="resumeEmailInput" placeholder="you@example.com" required>
+      <textarea name="message" rows="4" placeholder="Optional message (e.g., why you're requesting the resume)"></textarea>
+      <input type="hidden" name="_subject" value="Resume Request from Portfolio">
+      <button type="submit" id="resumeRequestBtn">Request</button>
+    </form>
+  </div>
+</div>
+
 
 <section id="skills-section">
   <h1>KNOWLEDGE AND SKILLS</h1>
