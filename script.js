@@ -88,6 +88,7 @@ document.getElementById("resumeRequestForm").addEventListener("submit", function
   }, 300);
 });
 
+//feedback
 const stars = document.querySelectorAll('.stars i');
 const ratingValue = document.getElementById('rating-value');
 
@@ -114,27 +115,22 @@ feedbackForm.addEventListener('submit', function (e) {
   const ratingValue = document.getElementById('rating-value').value;
   const message = document.getElementById('feedbackMessageInput').value.trim();
 
-  // Simple validation
   if (!ratingValue || !message) {
     e.preventDefault();
     alert('Please provide a rating and a message.');
     return;
   }
 
-  // Optionally: show thank you alert after slight delay
   setTimeout(() => {
     alert('Thank you! Your feedback has been sent.');
     
-    // Reset stars UI
     stars.forEach(s => {
       s.classList.remove('fa-solid');
       s.classList.add('fa-regular');
     });
     
-    // Reset form and hidden rating input
     feedbackForm.reset();
     document.getElementById('rating-value').value = '';
   }, 300);
 
-  // Let the form submit normally here (no e.preventDefault())
 });
