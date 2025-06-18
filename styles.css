@@ -570,7 +570,7 @@ section {
 
 .project-card img {
   width: 100%;
-  display: block;
+  height: 250px; /* or any fixed height */
   object-fit: cover;
 }
 

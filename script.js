@@ -40,17 +40,6 @@ const lightboxLinks = document.querySelectorAll('.lightbox');
     lightboxImg.src = '';
   }
 
-// CV Modal Logic
-const cvModal = document.getElementById("cvModal");
-const cvOpenBtn = document.querySelector(".download-btn");
-const cvCloseBtn = document.querySelector(".cv-close");
-
-cvOpenBtn.onclick = () => (cvModal.style.display = "block");
-cvCloseBtn.onclick = () => (cvModal.style.display = "none");
-window.addEventListener("click", (e) => {
-  if (e.target === cvModal) cvModal.style.display = "none";
-});
-
 // Resume Modal Logic
 const resumeModal = document.getElementById("resumeModal");
 const resumeOpenBtn = document.querySelector(".downloadresume-btn");
@@ -60,19 +49,6 @@ resumeOpenBtn.onclick = () => (resumeModal.style.display = "block");
 resumeCloseBtn.onclick = () => (resumeModal.style.display = "none");
 window.addEventListener("click", (e) => {
   if (e.target === resumeModal) resumeModal.style.display = "none";
-});
-
-// CV form
-document.getElementById("cvRequestForm").addEventListener("submit", function (e) {
-  const email = document.getElementById("cvEmailInput").value;
-  if (!email) {
-    e.preventDefault();
-    return;
-  }
-  setTimeout(() => {
-    alert(`Thank you! The owner has been notified.\n\nEmail: ${email}`);
-    cvModal.style.display = "none";
-  }, 300);
 });
 
 // Resume form
