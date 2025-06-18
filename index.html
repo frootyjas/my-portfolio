@@ -92,7 +92,6 @@
   </div>
 </div>
 
-
 <section id="skills-section">
   <h1>KNOWLEDGE</h1>
   <div class="skills-grid">
@@ -117,9 +116,167 @@
   </div>
 </section>
 
-<section id="projects-section">
+<section id="projects-section" class="projects-section">
   <h1>PROJECTS</h1>
-  <p>This is the Projects section. Developer will update this as soon as possible.</p>
+  <div class="projects-grid">
+
+    <!-- Project 1: Badminton Reservation System
+    <div class="project-card">
+      <img src="images/sample.jpg" alt="Badminton Reservation System">
+      <div class="project-overlay">
+        <button class="project-details-btn" onclick="openModal('badmintonModal')">See Details</button>
+      </div>
+      <h3 class="project-title">Badminton Management System</h3>
+    </div>
+
+    Project 2: GradeTrack
+    <div class="project-card">
+      <img src="images/sample.jpg" alt="GradeTrack">
+      <div class="project-overlay">
+        <button class="project-details-btn" onclick="openModal('gradetrackModal')">See Details</button>
+      </div>
+      <h3 class="project-title">GradeTrack: Online Grade Viewing System</h3>
+    </div>-->
+
+    <!-- Project 3: BookHaven -->
+    <div class="project-card">
+      <img src="images/b1.png" alt="BookHaven">
+      <div class="project-overlay">
+        <button class="project-details-btn" onclick="openModal('bookhavenModal')">See Details</button>
+      </div>
+      <h3 class="project-title">BookHaven: Online Book Store</h3>
+    </div>
+
+    <!-- Project 4: Pizza Ordering App -->
+    <div class="project-card">
+      <img src="images/p2.png" alt="Pizza Ordering App">
+      <div class="project-overlay">
+        <button class="project-details-btn" onclick="openModal('pizzaModal')">See Details</button>
+      </div>
+      <h3 class="project-title">Pizza Ordering App</h3>
+    </div>
+
+    <!-- Project 5: Weather App -->
+    <div class="project-card">
+      <img src="images/w1.png" alt="Weather App">
+      <div class="project-overlay">
+        <button class="project-details-btn" onclick="openModal('weatherModal')">See Details</button>
+      </div>
+      <h3 class="project-title">Weather App</h3>
+    </div>
+  </div>
+
+  <!-- Modal: Badminton Reservation System -->
+  <div id="badmintonModal" class="project-modal">
+    <div class="project-modal-content">
+      <span class="project-close" onclick="closeModal('badmintonModal')">&times;</span>
+      <img src="images/sample.jpg" alt="Badminton Reservation System View">
+      <h2>Badminton Reservation System</h2>
+      <p>This system is a web-based platform designed to automate the operations of badminton courts in Bataan. It connects players, coaches, and court owners in one digital environment to simplify court reservations, product purchases, event announcements, and more.</p>
+      <p><strong>Technologies:</strong> 
+        <span class="tag">#HTML</span>
+        <span class="tag">#CSS</span>
+        <span class="tag">#JavaScript</span>
+        <span class="tag">#Node.js</span>
+        <span class="tag">#MongoDB</span>
+      </p>
+      <a href="#" class="project-modal-btn">See Demo</a>
+      <a href="https://github.com/frootyjas/badminton-management-system" class="project-modal-btn">View GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal: GradeTrack -->
+  <div id="gradetrackModal" class="project-modal">
+    <div class="project-modal-content">
+      <span class="project-close" onclick="closeModal('gradetrackModal')">&times;</span>
+      <img src="images/sample.jpg" alt="GradeTrack View">
+      <h2>GradeTrack</h2>
+      <p>React-based application for students to securely view their grades online with role-based access.</p>
+      <p><strong>Technologies:</strong> 
+        <span class="tag">#React</span>
+        <span class="tag">#CSS</span>
+      </p>
+      <a href="#" class="project-modal-btn">See Demo</a>
+      <a href="#" class="project-modal-btn">View GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal: BookHaven -->
+  <div id="bookhavenModal" class="project-modal">
+    <div class="project-modal-content">
+      <span class="project-close" onclick="closeModal('bookhavenModal')">&times;</span>
+      <h2>BookHaven</h2>
+      <p>An online bookstore that allows users to browse, search, and purchase books using a Java backend.</p>
+      
+    <p><strong>Capabilities:</strong></p>
+    <ul>
+      <li>Browse available books</li>
+      <li>Search books by title or author</li>
+      <li>View detailed book information</li>
+      <li>Add books to shopping cart</li>
+      <li>Secure checkout and purchase</li>
+      <li>User authentication and registration</li>
+      <li>Generate and download purchase receipt</li>
+    </ul>
+      
+      <p><strong>Technologies:</strong> 
+        <span class="tag">#Java</span>
+        <span class="tag">#MySQL</span>
+      </p>
+      <a href="https://github.com/frootyjas/bookhaven-Ebookstore" class="project-modal-btn">View GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal: Pizza Ordering App -->
+  <div id="pizzaModal" class="project-modal">
+    <div class="project-modal-content">
+      <span class="project-close" onclick="closeModal('pizzaModal')">&times;</span>
+      <h2>Pizza Ordering App</h2>
+      <p>A C# app built with .NET Framework to browse, customize, and order pizzas with MySQL backend.</p>
+      
+      <p><strong>Capabilities:</strong></p>
+      <ul>
+        <li>Take customer orders</li>
+        <li>Select pizza add-ons and customizations</li>
+        <li>Calculate total amount with dynamic pricing</li>
+        <li>Manage and track inventory</li>
+        <li>Update existing product listings</li>
+        <li>Delete products from the menu</li>
+      </ul>
+      
+      <p><strong>Technologies:</strong> 
+        <span class="tag">#C#</span>
+        <span class="tag">#.NET Framework</span>
+        <span class="tag">#MySQL</span>
+      </p>
+      <a href="https://github.com/frootyjas/pizza-ordering-app" class="project-modal-btn">View GitHub</a>
+    </div>
+  </div>
+
+  <!-- Modal: Weather App -->
+  <div id="weatherModal" class="project-modal">
+    <div class="project-modal-content">
+      <span class="project-close" onclick="closeModal('weatherModal')">&times;</span>
+      <h2>Weather App</h2>
+      <p>A weather forecast application built in C# with live data integration and user-friendly interface. This app uses the AccuWeather API for real-time weather data.</p>
+      
+      <p><strong>Capabilities:</strong></p>
+      <ul>
+        <li>View latest weather updates for current location</li>
+        <li>Search weather by city or location</li>
+        <li>View detailed weather information (temperature, humidity, etc.)</li>
+        <li>Get 5-day weather forecast</li>
+      </ul>
+
+      <p><strong>Technologies:</strong> 
+        <span class="tag">#C#</span>
+        <span class="tag">#.NET Framework</span>
+        <span class="tag">#MySQL</span>
+      </p>
+
+      <a href="https://github.com/frootyjas/weather-app-winforms" class="project-modal-btn">View GitHub</a>
+    </div>
+  </div>
 </section>
 
 <section id="certification-section">
