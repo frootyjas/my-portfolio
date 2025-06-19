@@ -51,6 +51,38 @@ body::before {
   font-family: 'Exo', sans-serif;
 }
 
+ /* Navigation highlight indicator */
+ nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #7C4585;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-radius: 3px;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+nav ul li a.active {
+  color: #7C4585;
+  font-weight: 600;
+}
+
+nav ul li a i {
+  transition: color 0.3s ease;
+}
+
+nav ul li a.active i {
+  color: #7C4585;
+}
+
+   
 header.navbar {
   display: flex;
   justify-content: space-between;
@@ -93,6 +125,8 @@ nav ul li a {
   gap: 6px;
   text-decoration: none;
   color: inherit; 
+  position: relative;
+  padding: 5px 0;
 }
 
 nav ul li a.active {
@@ -891,6 +925,10 @@ nav.active {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  nav.active {
+    width: 70vw;
+  }
+
   .certificates-grid {
     grid-template-columns: 1fr;
   }
@@ -963,3 +1001,4 @@ nav.active {
   .scroll-to-top:hover i {
     animation: bounce 1s ease infinite;
   }
+

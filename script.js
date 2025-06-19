@@ -2,6 +2,10 @@ const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('main-nav');
 const navLinks = document.querySelectorAll('#nav-list a');
 
+
+
+
+
 // Toggle hamburger menu
 hamburger.addEventListener('click', () => {
   nav.classList.toggle('active');
@@ -119,6 +123,8 @@ feedbackForm.addEventListener('submit', function (e) {
     document.getElementById(id).style.display = 'none';
   }
 
+  
+
   // Optional: Close modal on outside click
   window.addEventListener('click', function(e) {
     document.querySelectorAll('.project-modal').forEach(modal => {
@@ -127,23 +133,84 @@ feedbackForm.addEventListener('submit', function (e) {
       }
     });
   });
+  
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  const sections = document.querySelectorAll('section');
 
-      // Scroll to top functionality
-      const scrollToTopBtn = document.getElementById('scrollToTop');
+// Update the highlightActiveSection function
+function highlightActiveSection() {
+  let currentSection = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
     
-      // Show/hide button based on scroll position
-      window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-          scrollToTopBtn.classList.add('show');
-        } else {
-          scrollToTopBtn.classList.remove('show');
-        }
-      });
+    // Calculate viewport thresholds
+    const viewportThreshold = window.innerHeight * 0.3;
+    const sectionBottom = sectionTop + sectionHeight;
+    
+    // Check if section is in view
+    if (window.pageYOffset >= (sectionTop - viewportThreshold) && 
+        window.pageYOffset <= (sectionBottom - viewportThreshold)) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+  
+  // Special case for last section at bottom of page
+  const scrollBottom = window.pageYOffset + window.innerHeight;
+  const pageBottom = document.documentElement.scrollHeight;
+  
+  if (scrollBottom >= pageBottom - 10) {
+    currentSection = sections[sections.length - 1].getAttribute('id');
+  }
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${currentSection}`) {
+      link.classList.add('active');
+    }
+  });
+}
+
+  // Scroll to top button visibility
+  function toggleScrollToTop() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add('show');
+    } else {
+      scrollToTopBtn.classList.remove('show');
+    }
+  }
+
+  
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
       
-      // Scroll to top when clicked
-      scrollToTopBtn.addEventListener('click', () => {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
         window.scrollTo({
-          top: 0,
+          top: target.offsetTop - 80,
           behavior: 'smooth'
         });
-      });
+      }
+    });
+  });
+  
+  // Scroll to top functionality
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+ // Initialize
+ highlightActiveSection();
+ toggleScrollToTop();
+ 
+ // Event listeners
+ window.addEventListener('scroll', () => {
+   highlightActiveSection();
+   toggleScrollToTop();
+ });
